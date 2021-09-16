@@ -11,7 +11,7 @@ let package = Package(
     ],
     dependencies: [
         //.package(name: "apnswift", url: "https://github.com/kylebrowning/APNSwift.git", from: "3.0.0"),
-		.package(name: "apnswift", url: "https://github.com/mackoj/APNSwift/tree/patch-1", .branch("patch-1")),
+		.package(name: "apnswift", url: "https://github.com/mackoj/APNSwift.git", .branch("patch-1")),
         .package(name: "vapor", url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
     ],
     targets: [
