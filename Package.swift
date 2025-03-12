@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:6.0
 import PackageDescription
 
 let package = Package(
@@ -11,12 +11,13 @@ let package = Package(
     ],
     dependencies: [
         //.package(name: "apnswift", url: "https://github.com/kylebrowning/APNSwift.git", from: "3.0.0"),
-		.package(name: "apnswift", url: "https://github.com/mackoj/APNSwift.git", .branch("patch-1")),
+		//.package(name: "apnswift", url: "https://github.com/mackoj/APNSwift.git", .branch("patch-1")),
+		.package(name: "apns", url: "https://github.com/jonlund/APNSwift.git", branch: "main"),
         .package(name: "vapor", url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
     ],
     targets: [
         .target(name: "APNS", dependencies: [
-            .product(name: "APNSwift", package: "apnswift"),
+            .product(name: "APNS", package: "apns"),
             .product(name: "Vapor", package: "vapor"),
         ]),
         .testTarget(name: "APNSTests", dependencies: [
